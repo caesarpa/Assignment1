@@ -32,7 +32,8 @@ public class MrClient {
    Map<String, Integer> jobStatus = new HashMap<String, Integer>();
 
    public  void requestMap(String ip, Integer portnumber, String inputfilepath, String outputfilepath) throws InterruptedException {
-      
+
+
       /* 
       * Insert your code here 
       * Create a stub for calling map function from the server
