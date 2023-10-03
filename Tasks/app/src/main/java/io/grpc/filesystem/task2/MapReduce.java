@@ -97,6 +97,7 @@ public class MapReduce {
      * @throws IOException
      */
     public static void reduce(String inputfilepath, String outputfilepath) throws IOException {
+        System.out.println("Starting reduce");
 
         TreeMap<String, Integer> table = new TreeMap<>();
 
@@ -150,8 +151,10 @@ public class MapReduce {
 
 
         File outputFile = new File(outputfilepath);
+        System.out.println("Creating file: " + outputFile.getName());
         FileWriter fw = new FileWriter(outputFile, false);
         fw.write("");
+        System.out.println("File clear done");
         FileWriter fwa = new FileWriter(outputFile, true);
 
         for (Map.Entry<String, Integer> entry : entryList) {
